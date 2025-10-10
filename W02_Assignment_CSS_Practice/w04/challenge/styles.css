@@ -1,0 +1,62 @@
+body {
+  background-color: #add8e6; /* Celeste claro */
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 40px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+}
+
+.quote {
+  font-size: 22px;
+  font-style: italic;
+  margin-bottom: 10px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.author {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+ol {
+  text-align: left;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.photo {
+  margin: 30px 0;
+}
+
+.photo img {
+  width: 300px;
+  border-radius: 8px;
+}
+
+.final-quote {
+  font-size: 26px;
+  font-style: italic;
+  margin: 40px auto 10px;
+  max-width: 700px;
+  line-height: 1.6;
+  color: white;
+}
+
+.footer {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-top: 10px;
+  color: white;
+}
