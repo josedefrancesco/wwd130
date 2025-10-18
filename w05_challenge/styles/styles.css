@@ -1,0 +1,61 @@
+/* === Reset and center the entire page === */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* === Main container for all content === */
+.container {
+  text-align: center;
+}
+
+/* === Title banner image styling === */
+.title-image {
+  display: block;
+  margin: 0 auto 40px;
+  max-width: 600px;
+  height: auto;
+}
+
+/* === Section with circular images and gray background === */
+.circle-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: #e0e0e0; /* light gray background */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+/* === Styling for each circular image === */
+.circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 5px solid white; /* optional white border for emphasis */
+}
+
+/* === Responsive layout for smaller screens === */
+@media (max-width: 600px) {
+  .circle-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .title-image {
+    max-width: 90%;
+  }
+}
