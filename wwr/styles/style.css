@@ -335,7 +335,153 @@ footer p a:hover {
 footer .social img {
   padding-top: 15px;
 }
+/* === Tours page: hero background (usa images/hero_2.jpg) === */
+.tours-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 320px;
+  padding: 40px 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #ffffff;
+}
 
+/* fondo (ruta relativa desde styles/style.css) */
+.tours-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/hero_2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+  filter: brightness(0.6);
+}
+
+/* overlay sutil para contraste */
+.tours-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(0,48,73,0.18), rgba(0,0,0,0.12));
+  z-index: 0;
+}
+
+/* contenido por delante del fondo */
+.tours-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* tipografía y espaciado del hero */
+.tours-hero h1 {
+  margin: 0 0 10px;
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  line-height: 1.05;
+  color: #fff;
+}
+
+.tours-hero .lead {
+  margin: 0 0 18px;
+  color: rgba(247,251,255,0.95);
+  max-width: 900px;
+  font-size: 1rem;
+}
+
+/* botón coherente */
+.book-cta {
+  display: inline-block;
+  background-color: rgba(0,119,182,0.95);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* === Tours cards: layout horizontal y mismo tamaño de imagen === */
+.tours {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap; /* en pantallas grandes las tres en fila */
+  margin: 0 20px;
+}
+
+/* cada tarjeta ocupa 1/3 del contenedor, mantiene proporción */
+.tour-card {
+  flex: 1 1 0;
+  max-width: 360px; /* límite deseado por tarjeta */
+  background: #f8fbfc;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #e6eef2;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+/* imagen de cada tour: mismas dimensiones y recorte coherente */
+.tour-img {
+  width: 100%;
+  height: 180px; /* altura fija para consistencia */
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+/* información de la tarjeta ocupa el resto */
+.tour-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* título y precio */
+.tour-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.price {
+  color: #005f8a;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+/* Responsive: en pantallas pequeñas apilan las tarjetas */
+@media (max-width: 900px) {
+  .tours {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+    margin: 0 12px;
+  }
+  .tour-card {
+    max-width: 720px;
+    width: 100%;
+  }
+  .tour-img {
+    height: 220px; /* un poco más alto en móvil si lo deseas */
+  }
+}
+
+/* Ajustes para pantallas muy amplias: centrar y limitar ancho total de 3 tarjetas */
+@media (min-width: 1200px) {
+  .tours {
+    max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 /* Responsive */
 @media (max-width: 768px) {
   header {

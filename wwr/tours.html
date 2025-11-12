@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tours | Dry Oar Boating</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <style>
+    /* Page-specific hero styles to match home hero using hero_2 background */
+    .tours-hero {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      text-align: center;
+      min-height: 320px;
+      padding: 40px 20px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* background image */
+    .tours-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("images/hero_2.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.85;
+      z-index: 0;
+      filter: brightness(0.8);
+    }
+
+    /* ensure text sits above background */
+    .tours-hero > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* optional translucent overlay for better text contrast */
+    .tours-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom right, rgba(0,48,73,0.25), rgba(0,0,0,0.15));
+      z-index: 0;
+      mix-blend-mode: multiply;
+    }
+
+    /* hero text styles */
+    .tours-hero h1 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+      color: #fff;
+    }
+    .tours-hero .lead {
+      margin: 0 0 18px;
+      color: #f7fbff;
+      max-width: 900px;
+    }
+
+    /* Button style (keeps consistency with .book-cta) */
+    .book-cta {
+      display: inline-block;
+      background-color: rgba(0,119,182,0.95);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Responsive adjustments for hero */
+    @media (min-width: 720px) {
+      .tours-hero {
+        min-height: 380px;
+        padding: 48px 20px;
+      }
+      .tours-hero h1 {
+        font-size: 2.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <header>
+      <a id="logo_link" href="index.html">
+        <img class="logo" src="images/logo.png" alt="Dry Oar Logo">
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="tours.html">Tours</a>
+        <a href="site-plan-rafting.html">Site Plan</a>
+        <a href="index.html">Contact Us</a>
+      </nav>
+    </header>
+
+    <main class="tours-grid">
+      <!-- Hero with hero_2 background -->
+      <section class="tours-hero" role="region" aria-label="Tours hero">
+        <h1>Explore Our Rafting Tours</h1>
+        <p class="lead">Choose from easy, moderate, and hard tours. Professional guides, all safety equipment provided, unforgettable scenery.</p>
+        <a class="book-cta" href="index.html">Book Now</a>
+      </section>
+
+      <section class="tours" aria-label="Tour options">
+        <h2>Tour Options</h2>
+
+        <article class="tour-card easy">
+          <img src="images/tour-easy.jpg" alt="People rafting on an easy river" class="tour-img">
+          <div class="tour-info">
+            <h3>Easy — River Rush Express</h3>
+            <p>Duration: 2 hours</p>
+            <p class="price">$45 USD</p>
+          </div>
+        </article>
+
+        <article class="tour-card moderate">
+          <img src="images/tour-moderate.jpg" alt="Group rafting a moderate river" class="tour-img">
+          <div class="tour-info">
+            <h3>Moderate — Canyon Adventure Half-day</h3>
+            <p>Duration: Half-day</p>
+            <p class="price">$85 USD</p>
+          </div>
+        </article>
+
+        <article class="tour-card hard">
+          <img src="images/tour-hard.jpg" alt="Rafting on challenging rapids" class="tour-img">
+          <div class="tour-info">
+            <h3>Hard — Extreme Rapids Ride Full-day</h3>
+            <p>Duration: Full-day</p>
+            <p class="price">$130 USD</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="testimonials" aria-label="Testimonials">
+        <h2>What Customers Say</h2>
+        <blockquote>"Absolutely thrilling! The guides were amazing and the views were spectacular!" — Sarah M.</blockquote>
+        <blockquote>"Great experience for all skill levels. I'll definitely come back!" — Diego R.</blockquote>
+        <blockquote>"Best outdoor experience I've had in years!" — Emily T.</blockquote>
+      </section>
+
+      <section class="cta-bottom">
+        <p>Ready to book your adventure?</p>
+        <a class="book-cta" href="index.html">BOOK YOUR ADVENTURE NOW</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <p>Dry Oar © 2025 - Jose De Francesco</p>
+        <a href="site-plan-rafting.html">Site Plan</a>
+        <a href="index.html">Contact Us</a>
+      </div>
+      <div class="social">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/facebook.png" alt="Facebook icon">
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/twitter.png" alt="Twitter icon">
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/instagram.png" alt="Instagram icon">
+        </a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
