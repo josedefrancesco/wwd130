@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="styles/style.css">
+
+  <style>
+
+
+    form {
+      max-width: 600px;
+      margin: 1.5rem auto;
+      padding: 1rem;
+      background: #f7f7f7;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button[type="submit"] {
+      background: #0b6efd;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background: #0956c6;
+    }
+
+    
+    #feedback {
+      background-color: antiquewhite;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: .5em;
+      display: none;
+      text-align: center;
+      font-weight: 600;
+      z-index: 1000;
+    }
+
+    .moveDown {
+      margin-top: 3em;
+    }
+
+    @media (max-width: 540px) {
+      form { margin: 1rem; padding: .75rem; }
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <a id="logo_link" href="index.html">
+        <img class="logo" src="images/logo.png" alt="Dry Oar Logo">
+    </a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="tours.html">Tours</a>
+        <a href="site-plan-rafting.html">Site Plan</a>
+        <a href="contactus.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    
+    <div id="feedback"></div>
+
+    
+    <form action="#" method="post" novalidate>
+      <fieldset>
+        <legend>Send us a message</legend>
+
+        <label for="user_name">Name</label>
+        <input id="user_name" name="user_name" type="text" required>
+
+        <label for="user_email">Email</label>
+        <input id="user_email" name="user_email" type="email" required>
+
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic">
+          <option value="general">General question</option>
+          <option value="booking">Bookings</option>
+          <option value="feedback">Feedback</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit">Send</button>
+      </fieldset>
+    </form>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+    <p>Dry Oar © 2025 - Jose De Francesco</p>
+    <a href="site-plan-rafting.html">Site Plan</a>
+    <a href="index.html">Contact Us</a>
+  </div>
+  <div class="social">
+    <a href="https://facebook.com" target="_blank">
+      <img src="images/facebook.png" alt="Facebook icon">
+    </a>
+    <a href="https://twitter.com" target="_blank">
+      <img src="images/twitter.png" alt="Twitter icon">
+    </a>
+    <a href="https://instagram.com" target="_blank">
+      <img src="images/instagram.png" alt="Instagram icon">
+    </a>
+  </div>
+  </footer>
+
+  <script>
+    
+    const feedbackElement = document.getElementById('feedback');
+    const formElement = document.forms[0];
+
+    formElement.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = formElement.user_name.value || 'friend';
+      feedbackElement.innerHTML = 'Hello ' + name + '! Thank you for your message. We will get back to you as soon as possible!';
+      feedbackElement.style.display = "block";
+      document.body.classList.toggle('moveDown');
+    });
+  </script>
+</body>
+</html>
