@@ -1,0 +1,157 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Lato&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #F5F5DC; /* Light Beige */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+header {
+  background-color: #8B825B; /* Dark Beige */
+  padding: 2rem;
+  color: white;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo-area {
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.text-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.site-name {
+  font-family: 'IM Fell French Canon SC', serif;
+  font-size: 2.8rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.main-nav {
+  margin-top: 0.5rem;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.main-nav a:hover {
+  color: #FFD700; /* Gold */
+}
+
+/* HERO TITLES */
+.hero h2 {
+  font-family: 'IM Fell French Canon SC', serif;
+  font-size: 2rem;
+  color: #4682B4; /* Steel Blue */
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* CONTENT LAYOUT */
+.content-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.content-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.content-text {
+  max-width: 800px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  background-color: #F5F5DC;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #8B825B; /* Steel Blue */
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.footer-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.footer-right {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 36px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #8B825B; /* Dark Beige */
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #FFD700; /* Gold */
+  color: #333;
+}
+.site-plan-link {
+  color: white;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+.site-plan-link:hover {
+  color: #FFD700;
+}
